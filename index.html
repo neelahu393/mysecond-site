@@ -319,4 +319,252 @@
         summary {
             font-weight: 600;
             cursor: pointer;
-            list-
+            list-style: none; /* Remove default triangle */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        summary::after {
+            content: "+";
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+        details[open] summary::after {
+            content: "-";
+        }
+        details p {
+            margin-top: 15px;
+            color: var(--text-gray);
+        }
+
+        /* --- Footer CTA --- */
+        .footer-cta {
+            padding: 100px 0;
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+        }
+        .footer-cta h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        .footer-cta p {
+            margin-bottom: 40px;
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        .btn-light {
+            background: white;
+            color: var(--primary-color);
+        }
+        .btn-light:hover {
+            background: #f0f0f0;
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 768px) {
+            :root {
+                --section-spacing: 60px;
+            }
+            .hero .container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            .hero-image .img-placeholder {
+                height: 350px;
+            }
+            h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">藍新簡單收</div>
+            <a href="#contact" class="btn btn-primary">立即申請</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>你的 Android 設備，<br>現在就是行動刷卡機。</h1>
+                <p>這是一款由「簡單行動支付」發行，整合信用卡、國內外電子支付收款的經典之作，讓您的設備立即具備多元支付收款功能。</p>
+                <a href="#signup" class="btn btn-primary btn-lg">立即下載體驗</a>
+            </div>
+            <div class="hero-image">
+                <div class="img-placeholder">
+                    `
+                    <div class="hero-image-caption">支援信用卡與行動支付感應收款</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits">
+        <div class="container">
+            <h2>為什麼選擇 Android 感應收款？</h2>
+            <p class="section-subtitle">專為中小企業與個人商家設計，打破傳統 POS 機的限制。</p>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">📱</div>
+                    <h3>零硬體成本</h3>
+                    <p>告別笨重的刷卡機！只要您的Android設備有電、有網路，就能開始做生意。</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔄</div>
+                    <h3>廣泛適用性</h3>
+                    <p>支援多數具備 NFC 功能的 Android 設備(Android12以上)，從手機到各式平板都能支援。</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔒</div>
+                    <h3>金融級安全防護</h3>
+                    <p>通過PCI CPoC與MPoC雙認證，您的Tap to Pay交易全程加密，資金隱私絕對安全！</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>快速部署</h3>
+                    <p>下載 App，通過審核並取得啟動碼，讓您的設備立即具備多元支付收款功能。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works">
+        <div class="container">
+            <h2>簡單三步驟，即刻收款</h2>
+            <p class="section-subtitle">直觀的操作介面，讓結帳流程前所未有的順暢。</p>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="img-placeholder step-image">
+                        `
+                    </div>
+                    <div class="step-number">1</div>
+                    <h3>輸入金額</h3>
+                    <p>在你的商家 App 中輸入本次交易金額。</p>
+                </div>
+                <div class="step-card">
+                    <div class="img-placeholder step-image" style="border-color: var(--secondary-color);">
+                        `
+                    </div>
+                    <div class="step-number">2</div>
+                    <h3>背面感應</h3>
+                    <p>請顧客將卡片或裝置靠近你 Android 手機的<b>背面 NFC 感應區</b>。</p>
+                </div>
+                <div class="step-card">
+                    <div class="img-placeholder step-image">
+                        `
+                    </div>
+                    <div class="step-number">3</div>
+                    <h3>完成交易</h3>
+                    <p>聽見提示音並看到螢幕確認，收款即時完成。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="compatibility">
+        <div class="container">
+            <h2>我的手機能用嗎？</h2>
+            <p class="section-subtitle">請檢查您的 Android 裝置是否符合以下基本要求：</p>
+            <div class="compat-box">
+                <ul class="checklist">
+                    <li>作業系統 Android 12 或以上版本</li>
+                    <li>具備 NFC 功能並已開啟</li>
+                    <li>裝置未經 Root (越獄) 或修改系統</li>
+                    <li>能夠連接穩定的網際網路</li>
+                </ul>
+                <p style="margin-top: 20px; font-size: 0.9rem; color: var(--text-gray);">*多數近三年內上市的中高階 Android 手機皆符合要求。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="payments">
+        <div class="container">
+            <h3>支援主流感應支付方式</h3>
+            <div class="payment-logos">
+                <span class="payment-logo-placeholder">VISA</span>
+                <span class="payment-logo-placeholder">Mastercard</span>
+                <span class="payment-logo-placeholder">JCB</span>
+                <span class="payment-logo-placeholder">Apple Pay</span>
+                <span class="payment-logo-placeholder">Google Pay</span>
+                <span class="payment-logo-placeholder">Samsung Pay</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="use-cases">
+        <div class="container">
+            <h2>適用於各種生意場景</h2>
+            <div class="cases-grid" style="margin-top: 40px;">
+                <div class="case-card">
+                    <div class="img-placeholder case-image">
+                        `
+                    </div>
+                    <div class="case-content">
+                        <h3>市集與快閃店</h3>
+                        <p>結帳櫃檯不再擁擠，無需電源線，隨處皆可快速結帳。</p>
+                    </div>
+                </div>
+                <div class="case-card">
+                    <div class="img-placeholder case-image">
+                        `
+                    </div>
+                    <div class="case-content">
+                        <h3>個人服務與工作室</h3>
+                        <p>私人教練、美甲師、設計師，提供顧客更專業的支付體驗。</p>
+                    </div>
+                </div>
+                <div class="case-card">
+                    <div class="img-placeholder case-image">
+                        `
+                    </div>
+                    <div class="case-content">
+                        <h3>餐飲桌邊服務</h3>
+                        <p>服務生直接在桌邊完成點餐與收款，提升翻桌率。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <div class="container">
+            <h2>常見問題</h2>
+            <div style="margin-top: 40px;">
+                <details>
+                    <summary>怎麼知道我的手機有沒有 NFC？</summary>
+                    <p>您可以進入手機的「設定」>「連接」或「無線與網路」，查看是否有「NFC」選項。大多數現代 Android 手機的快速設定面板中也有 NFC 開關。</p>
+                </details>
+                <details>
+                    <summary>客人用 iPhone (Apple Pay) 付款，我能收嗎？</summary>
+                    <p>可以。您的 Android 手機可以接收任何支援標準感應支付的裝置，包括 iPhone (Apple Pay)、Apple Watch 以及其他使用 Google Pay 的 Android 手機。</p>
+                </details>
+                <details>
+                    <summary>感應位置在哪裡？</summary>
+                    <p>與 iPhone 不同，Android 手機的 NFC 感應區通常位於機身「背面」的中上方。建議您在收款時，引導顧客將卡片貼近您手機背面的鏡頭附近區域。</p>
+                </details>
+                <details>
+                    <summary>使用這項服務安全嗎？</summary>
+                    <p>非常安全。我們採用符合國際 PCI DSS 標準的加密技術。在交易過程中，您的手機不會儲存任何顧客的卡片資料，所有數據都會被加密傳輸至支付網關。</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer-cta">
+        <div class="container">
+            <h2>把生意放進口袋帶著走</h2>
+            <p>現在就將你的 Android 裝置升級為最強大的收款神器。</p>
+            <button class="btn btn-light btn-lg">立即免費註冊</button>
+        </div>
+    </section>
+
+</body>
+</html>
